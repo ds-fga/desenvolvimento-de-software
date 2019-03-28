@@ -44,7 +44,7 @@ Informações importantes
 Este curso utiliza GitHub + Google classroom para gerenciar o curso. A comunicação com a turma é feita através do Google Classroom ou por issues no repositório do Github. Habilite a funcionalidade "Watch" no repositório para receber notificações sobre atualizações.
 
 Google Classroom:
-    http://classroom.google.com/ - Código de inscrição: 1byukn
+    http://classroom.google.com/ - Código de inscrição: 3bkhgg
 Github:
     http://github.com/fabiommendes/desenvolvimento-de-software/
 
