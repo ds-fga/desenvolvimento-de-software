@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>{{ title|default('Minha página') }}</title>
+        <link
+            rel="stylesheet"
+            href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
+        />
+        <link
+            rel="stylesheet"
+            href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css"
+        />
+        <!-- Milligram https://milligram.io/#getting-started -->
+        <link
+            rel="stylesheet"
+            href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css"
+        />
+    </head>
+
+    <body>
+        <div class="container">
+            <img src="/static/tarsila.png">
+            <h1>Dados sobre o Brasil</h1>
+            <h2>O que você quer saber?</h2>
+            <ul>
+                <li><a href="/renda/">Renda</a></li>
+                <li><a href="/escolaridade/">Escolaridade</a></li>
+                <li><a href="/idade/">Idade</a></li>
+            </ul>
+        </div>
+    </body>
+</html>
