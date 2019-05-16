@@ -1,0 +1,25 @@
+.memoria {
+    background: #eee;
+    max-width: 100%;
+}
+
+.cartao {
+    box-shadow: 2px 5px 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    flex: 1;
+    height: auto;
+    width: 22%;
+    margin: 1%;
+}
+
+.cartao:hover {
+    filter: brightness(125%);
+}
+
+.cartao.virado {
+    filter: grayscale(0) contrast(0) brightness(40%);
+}
+
+.cartao.virado:hover {
+    filter: grayscale(0) contrast(0) brightness(50%);
+}
