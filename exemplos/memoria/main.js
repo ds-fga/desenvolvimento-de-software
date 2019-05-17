@@ -2,9 +2,15 @@ let estado = {
   flipouCarta: false,
   primeiraCarta: null,
   segundaCarta: null,
+  aguardandoFimDaRodada: false,
 };
 
+$(() => $(".cartao").on("click", main));
+
 function main(event) {
+
+  if(estado.aguardandoFimDaRodada)
+    return;
 
   const cartaAtual = $(event.target);
 
@@ -30,24 +36,23 @@ function selecionaSegundaCartaDoPar(cartaAtual) {
 
 function checaPorMatch() {
   if(estado.primeiraCarta.data("tipocarta") === estado.segundaCarta.data("tipocarta"))
-    desabilitaOPar();  
+    desabilitaOPar();
   else
-    viraOPar()    
+    desviraOPar();
 }
 
 function desabilitaOPar() {
-  estado.primeiraCarta.off('click', main);
-  estado.segundaCarta.off('click', main);
+  estado.primeiraCarta.off("click", main);
+  estado.segundaCarta.off("click", main);
 }
 
-function viraOPar() {
+function desviraOPar() {
+
+  estado.aguardandoFimDaRodada = true;
+
   setTimeout(() => {
     estado.primeiraCarta.addClass("costas");
     estado.segundaCarta.addClass("costas");
+    estado.aguardandoFimDaRodada = false;
   }, 800)
 }
-
-$(() => {
-
-  $(".cartao").on("click", main);
-});
