@@ -5,25 +5,28 @@
 }
 
 html {
-  font-size: calc(.52vw + 1px);
+  font-size: calc(.42vw + 2.5px);
 }
 
 body {
   height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   background-image: linear-gradient(to bottom right,rgb(0, 255, 200), rgb(0, 183, 255));
+  background-repeat: no-repeat;
 }
 
 .titulo { 
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 3rem;
+  font-family: Impact, 'Arial Narrow Bold', sans-serif;
+  font-size: 3.2rem;
+  margin-top: 2rem;
   letter-spacing: .6rem;
   text-transform: uppercase;
   color: white;
-  text-shadow: 0rem -.1rem .2rem black;
+  text-shadow: 0rem -.15rem .4rem black;
 }
 
 .tabuleiro {
@@ -32,6 +35,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  perspective: 100rem;
 }
 
 .linha {
@@ -41,29 +45,27 @@ body {
 }
 
 .cartao {
-  width: 25rem;
+  width: 24rem;
   margin: 1rem;
   box-shadow: 0rem .5rem .5rem rgba(0, 0, 0, .8);
-
   cursor: pointer;
   transition: all 0.3s;
+  transform-style: preserve-3d;
 }
 
 .cartao:hover {
-  filter: brightness(125%);
+  filter: brightness(130%);
   box-shadow: 0rem .8rem 1.5rem rgba(0, 0, 0, 0.8);
   transform: translateY(-.5rem);
 }
 
-.cartao:active {
-  transform: translateY(0rem);
-  box-shadow: 0rem .4rem .2rem rgba(0, 0, 0, .8);
-}
-
 .cartao.costas {
   filter: grayscale(0) contrast(0) brightness(40%);
+  transform: rotateY(180deg);
 }
 
 .cartao.costas:hover {
   filter: grayscale(0) contrast(0) brightness(50%);
+  box-shadow: 0rem .8rem 1.5rem rgba(0, 0, 0, 0.8);
+  transform: translateY(-.5rem) rotateY(180deg);
 }
