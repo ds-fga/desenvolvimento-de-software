@@ -9,11 +9,9 @@ $(() => $(".cartao").on("click", main));
 
 function main(event) {
 
-  if(estado.aguardandoFimDaRodada)
-    return;
+  if(estado.aguardandoFimDaRodada) return;
 
   const cartaAtual = $(event.target);
-
   cartaAtual.toggleClass("costas");
 
   if(!estado.flipouCarta) // primeiro click para tentar achar o par
@@ -27,10 +25,10 @@ function main(event) {
 function selecionaPrimeiraCartaDoPar(cartaAtual) {
   estado.flipouCarta = true;
   estado.primeiraCarta = cartaAtual;
+  estado.primeiraCarta.off("click", main); // não responde ao click, para evitar um match com ela mesma
 }
 
 function selecionaSegundaCartaDoPar(cartaAtual) {
-  estado.flipouCarta = false;
   estado.segundaCarta = cartaAtual;
 }
 
@@ -44,6 +42,7 @@ function checaPorMatch() {
 function desabilitaOPar() {
   estado.primeiraCarta.off("click", main);
   estado.segundaCarta.off("click", main);
+  resetaOTabuleiro();
 }
 
 function desviraOPar() {
@@ -52,7 +51,15 @@ function desviraOPar() {
 
   setTimeout(() => {
     estado.primeiraCarta.addClass("costas");
+    estado.primeiraCarta.on("click", main); // volta a responder ao click, já que não achou o par
     estado.segundaCarta.addClass("costas");
-    estado.aguardandoFimDaRodada = false;
+    resetaOTabuleiro();
   }, 800)
+}
+
+function resetaOTabuleiro() {
+  estado.flipouCarta = false;
+  estado.aguardandoFimDaRodada = false;
+  estado.primeiraCarta = null;
+  estado.segundaCarta = null;
 }
