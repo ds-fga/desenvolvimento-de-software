@@ -4,36 +4,50 @@ let estado = {
   segundaCarta: null,
 };
 
-function jogo(event) {
+function main(event) {
 
   const cartaAtual = $(event.target);
 
   cartaAtual.toggleClass("costas");
 
-  if(!estado.flipouCarta) { // primeiro click para tentar achar o par
-    estado.flipouCarta = true;
-    estado.primeiraCarta = cartaAtual;
+  if(!estado.flipouCarta) // primeiro click para tentar achar o par
+    selecionaPrimeiraCartaDoPar(cartaAtual);
+  else {
+    selecionaSegundaCartaDoPar(cartaAtual);
+    checaPorMatch();
   }
-  else { // segundo click para tentar achar o par
-    estado.flipouCarta = false;
-    estado.segundaCarta = cartaAtual;
-    console.log(estado.flipouCarta, estado.segundaCarta);
-    
-    if(estado.primeiraCarta.data("tipocarta") === estado.segundaCarta.data("tipocarta")) {
-      console.log("iguais");
-      estado.primeiraCarta.off('click', jogo);
-      estado.segundaCarta.off('click', jogo);
-    }
-    else {
-      estado.primeiraCarta.addClass("costas");
-      estado.segundaCarta.addClass("costas");
-      console.log('oi');
-    }
-  }
+}
 
+function selecionaPrimeiraCartaDoPar(cartaAtual) {
+  estado.flipouCarta = true;
+  estado.primeiraCarta = cartaAtual;
+}
+
+function selecionaSegundaCartaDoPar(cartaAtual) {
+  estado.flipouCarta = false;
+  estado.segundaCarta = cartaAtual;
+}
+
+function checaPorMatch() {
+  if(estado.primeiraCarta.data("tipocarta") === estado.segundaCarta.data("tipocarta"))
+    desabilitaOPar();  
+  else
+    viraOPar()    
+}
+
+function desabilitaOPar() {
+  estado.primeiraCarta.off('click', main);
+  estado.segundaCarta.off('click', main);
+}
+
+function viraOPar() {
+  setTimeout(() => {
+    estado.primeiraCarta.addClass("costas");
+    estado.segundaCarta.addClass("costas");
+  }, 800)
 }
 
 $(() => {
 
-  $(".cartao").on("click", jogo);
+  $(".cartao").on("click", main);
 });
