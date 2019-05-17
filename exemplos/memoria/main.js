@@ -1,25 +1,37 @@
 let estado = {
+  cartas: null,
   flipouCarta: false,
   primeiraCarta: null,
   segundaCarta: null,
   aguardandoFimDaRodada: false,
 };
 
-$(() => $(".cartao").on("click", main));
+$(() => {
+  estado.cartas = $(".cartao");
+  estado.cartas.on("click", main);
+  embaralhaCartas();
+});
 
 function main(event) {
-
+  
   if(estado.aguardandoFimDaRodada) return;
-
+  
   const cartaAtual = $(event.target);
   cartaAtual.toggleClass("costas");
-
+  
   if(!estado.flipouCarta) // primeiro click para tentar achar o par
-    selecionaPrimeiraCartaDoPar(cartaAtual);
+  selecionaPrimeiraCartaDoPar(cartaAtual);
   else {
     selecionaSegundaCartaDoPar(cartaAtual);
     checaPorMatch();
   }
+}
+
+function embaralhaCartas() {
+  estado.cartas.map(i => {
+    let posicaoRandom = Math.floor(Math.random() * 12); // gera um numero de 1 a quantidade de cartas(12)
+    estado.cartas.eq(i).css("order", posicaoRandom); // propriedade 'order' define a posição da carta com base no numero rand gerado
+  })
 }
 
 function selecionaPrimeiraCartaDoPar(cartaAtual) {
