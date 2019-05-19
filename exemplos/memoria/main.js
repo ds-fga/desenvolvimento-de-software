@@ -4,9 +4,11 @@ let estado = {
   primeiraCarta: null,
   segundaCarta: null,
   aguardandoFimDaRodada: false,
+  tentativas: 20
 };
 
 $(() => {
+  $("#tentativas").html(estado.tentativas);
   estado.cartas = $(".cartao");
   estado.cartas.on("click", main);
   embaralhaCartas();
@@ -26,16 +28,29 @@ function main(event) {
     checaPorMatch();
   }
 
-  checaSeTerminou();
+  atualizaTentativas();
+  checaSeGanhou();
+  checaSePerdeu();
 }
 
-function checaSeTerminou() {
+function atualizaTentativas() {
+  estado.tentativas --;
+  $("#tentativas").html(estado.tentativas);
+}
+
+function checaSeGanhou() {
   const cartasNaoViradas = $(".cartao.costas");
 
   if(!cartasNaoViradas.length) {
     setTimeout(() => {
       $(".tabuleiro").html("<h1 class='msg-vitoria texto-chamativo'>Que memória de elefante a sua!</h1>");
     }, 500);
+  }
+}
+
+function checaSePerdeu() {
+  if(estado.tentativas === 0) {
+    $(".tabuleiro").html("<h1 class='msg-vitoria texto-chamativo'>Você é fraco, lhe falta meme!</h1>");
   }
 }
 
@@ -66,7 +81,7 @@ function checaPorMatch() {
 function desabilitaOPar() {
   estado.primeiraCarta.off("click", main);
   estado.segundaCarta.off("click", main);
-  resetaEstado();
+  preparaParaAProximaRodada();
 }
 
 function desviraOPar() {
@@ -77,11 +92,11 @@ function desviraOPar() {
     estado.primeiraCarta.addClass("costas");
     estado.primeiraCarta.on("click", main); // volta a responder ao click, já que não achou o par
     estado.segundaCarta.addClass("costas");
-    resetaEstado();
+    preparaParaAProximaRodada();
   }, 800)
 }
 
-function resetaEstado() {
+function preparaParaAProximaRodada() {
   estado.flipouCarta = false;
   estado.aguardandoFimDaRodada = false;
   estado.primeiraCarta = null;

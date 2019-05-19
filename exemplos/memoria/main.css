@@ -20,11 +20,17 @@ body {
   font-family: Impact, 'Arial Narrow Bold', sans-serif;
 }
 
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .titulo { 
   font-size: 3.2rem;
   margin-top: 2rem;
   color: white;
-  text-shadow: 0 .3rem 0px black, 0 .6rem 0 black, 0 .8rem 0 blue;
+  text-shadow: 0 .3rem .4rem black;
 }
 
 .tabuleiro {
