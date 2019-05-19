@@ -17,16 +17,14 @@ body {
   align-items: center;
   background-image: linear-gradient(to bottom right,rgb(0, 255, 200), rgb(0, 183, 255));
   background-repeat: no-repeat;
+  font-family: Impact, 'Arial Narrow Bold', sans-serif;
 }
 
 .titulo { 
-  font-family: Impact, 'Arial Narrow Bold', sans-serif;
   font-size: 3.2rem;
   margin-top: 2rem;
-  letter-spacing: .6rem;
-  text-transform: uppercase;
   color: white;
-  text-shadow: 0rem -.15rem .4rem black;
+  text-shadow: 0 .3rem 0px black, 0 .6rem 0 black, 0 .8rem 0 blue;
 }
 
 .tabuleiro {
@@ -35,6 +33,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   perspective: 100rem;
 }
 
@@ -68,4 +67,16 @@ body {
   filter: grayscale(0) contrast(0) brightness(50%);
   box-shadow: 0rem .8rem 1.5rem rgba(0, 0, 0, 0.8);
   transform: translateY(-.5rem) rotateY(180deg);
+}
+
+
+.msg-vitoria {
+  font-size: 4.5rem;
+  color: white;
+  text-shadow: 0 .3rem 0px black, 0 .6rem 0 black, 0 1rem 0 blue;
+}
+
+.texto-chamativo {
+  text-transform: uppercase;
+  letter-spacing: .6rem;
 }

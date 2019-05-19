@@ -17,13 +17,25 @@ function main(event) {
   if(estado.aguardandoFimDaRodada) return;
   
   const cartaAtual = $(event.target);
-  cartaAtual.toggleClass("costas");
+  cartaAtual.removeClass("costas");
   
   if(!estado.flipouCarta) // primeiro click para tentar achar o par
-  selecionaPrimeiraCartaDoPar(cartaAtual);
+    selecionaPrimeiraCartaDoPar(cartaAtual);
   else {
     selecionaSegundaCartaDoPar(cartaAtual);
     checaPorMatch();
+  }
+
+  checaSeTerminou();
+}
+
+function checaSeTerminou() {
+  const cartasNaoViradas = $(".cartao.costas");
+
+  if(!cartasNaoViradas.length) {
+    setTimeout(() => {
+      $(".tabuleiro").html("<h1 class='msg-vitoria texto-chamativo'>Que memória de elefante a sua!</h1>");
+    }, 500);
   }
 }
 
@@ -54,7 +66,7 @@ function checaPorMatch() {
 function desabilitaOPar() {
   estado.primeiraCarta.off("click", main);
   estado.segundaCarta.off("click", main);
-  resetaOTabuleiro();
+  resetaEstado();
 }
 
 function desviraOPar() {
@@ -65,11 +77,11 @@ function desviraOPar() {
     estado.primeiraCarta.addClass("costas");
     estado.primeiraCarta.on("click", main); // volta a responder ao click, já que não achou o par
     estado.segundaCarta.addClass("costas");
-    resetaOTabuleiro();
+    resetaEstado();
   }, 800)
 }
 
-function resetaOTabuleiro() {
+function resetaEstado() {
   estado.flipouCarta = false;
   estado.aguardandoFimDaRodada = false;
   estado.primeiraCarta = null;
