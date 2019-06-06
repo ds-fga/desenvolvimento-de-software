@@ -1,25 +1,88 @@
-.memoria {
-    background: #eee;
-    max-width: 100%;
+* { /* Reset, pois cada navegador adiciona por padrão alguns estilos */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box
+}
+
+html {
+  font-size: calc(.42vw + 2.5px);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-image: linear-gradient(to bottom right,rgb(0, 255, 200), rgb(0, 183, 255));
+  background-repeat: no-repeat;
+  font-family: Impact, 'Arial Narrow Bold', sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titulo { 
+  font-size: 3.2rem;
+  margin-top: 2rem;
+  color: white;
+  text-shadow: 0 .3rem .4rem black;
+}
+
+.tabuleiro {
+  width: 110rem;
+  height: 80rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  perspective: 100rem;
+}
+
+.linha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cartao {
-    box-shadow: 2px 5px 1px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    flex: 1;
-    height: auto;
-    width: 22%;
-    margin: 1%;
+  width: 24rem;
+  margin: 1rem;
+  box-shadow: 0rem .5rem .5rem rgba(0, 0, 0, .8);
+  cursor: pointer;
+  transition: all .2s;
+  transform-style: preserve-3d;
 }
 
 .cartao:hover {
-    filter: brightness(125%);
+  filter: brightness(130%);
+  box-shadow: 0rem .8rem 1.5rem rgba(0, 0, 0, 0.8);
+  transform: translateY(-.5rem);
 }
 
-.cartao.virado {
-    filter: grayscale(0) contrast(0) brightness(40%);
+.cartao.costas {
+  filter: grayscale(0) contrast(0) brightness(40%);
+  transform: rotateY(180deg);
 }
 
-.cartao.virado:hover {
-    filter: grayscale(0) contrast(0) brightness(50%);
+.cartao.costas:hover {
+  filter: grayscale(0) contrast(0) brightness(50%);
+  box-shadow: 0rem .8rem 1.5rem rgba(0, 0, 0, 0.8);
+  transform: translateY(-.5rem) rotateY(180deg);
+}
+
+
+.msg-vitoria {
+  font-size: 4.5rem;
+  color: white;
+  text-shadow: 0 .3rem 0px black, 0 .6rem 0 black, 0 1rem 0 blue;
+}
+
+.texto-chamativo {
+  text-transform: uppercase;
+  letter-spacing: .6rem;
 }
