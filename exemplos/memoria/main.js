@@ -11,6 +11,10 @@ $(() => {
             console.log("Mouse saiu do cartão");
         })
         .on("click", ev => {
-            $(ev.target).toggleClass('virado');
+            if (estado.selecionado === null) {
+                //
+            } else {
+                $(ev.target).toggleClass('virado');
+            }
         });
 });
