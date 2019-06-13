@@ -3,23 +3,18 @@
 
 ## Grupos
 
-### LEM	
-- Marlon Mendes (14/0063919)	
-- Lucas Rodrigues Fonseca (18/0114077)	
-- Eric Chagas de Oliveira (18/0119508)	
-- Pedro de Miranda Haick/180129147			
-
-### Nexus	
-- Eduardo Maia Rezende / 180119231	
-- João Pedro Alves da Silva Chaves / 180123203	
-- Daniel Porto de Souza / 180149687	
-- Andrew Lucas Guedes de Souza / 160023921
+### Amigos do bigode	
+- Caio Oliveira de Moraes 150120630	
+- Matheus Rodrigues do Nascimento 160015294	
+- Lucas Pereira de Andrade de Macêdo 150137397
 
 ### Vingativos-fimdejogo	
 - Kess Jhones Gomes Tavares/180124498	
 - João Pedro Gomes de Almeida/180103199	
 - Vitor Diniz Pagani Vieira Ribeiro/180132385	
 - Eduardo Nunes Picolo /180113151
+
+
 
 ## Escopo e produto
 
@@ -37,6 +32,7 @@ Não esqueça de utilizar a arte do jogo e os sprites de personagens no estilo d
 
 Criar uma aplicação Flask que consiga coletar a informação necessária
 
+``` 
 13/06:
     Criar um esboço do site e como serão as telas e interações
     Criar tarefas no issue tracker do Github
@@ -54,3 +50,4 @@ Criar uma aplicação Flask que consiga coletar a informação necessária
     Melhoras de estilo, usabilidade e informações apresentadas pela aplicação
 04/07:
     Integração com outros trabalhos
+```
