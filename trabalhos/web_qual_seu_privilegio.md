@@ -7,15 +7,14 @@
 - Ian Fillipe Pontes Ferreira / 180102087	
 - Guilherme de Morais Richter / 180101617	
 - Ítalo Vinícius Pereira Guimarães / 180102656	
+- Lucas Rodrigues Fonseca (18/0114077)	
+- Eric Chagas de Oliveira (18/0119508)	
 
 ### Maia.cia	
 - Mateus Cunha Maia 18/0106805	
 - Vinicius de Sousa Saturnino 18/0132245	
 - Matheus Afonso de Souza 18/0127641	
 
-### Equipe Webzada	
-- Lucas Melo dos Santos/180125885	
-- Pedro Haick/180129147		
 
 ## Escopo e produto
 
@@ -34,6 +33,7 @@ Não esqueça de utilizar a arte do jogo e os sprites de personagens no estilo d
 
 Criar uma aplicação Flask que consiga coletar a informação necessária
 
+```
 13/06:
     Criar um esboço do site e como serão as telas e interações
     Criar tarefas no issue tracker do Github
@@ -51,3 +51,4 @@ Criar uma aplicação Flask que consiga coletar a informação necessária
     Melhoras de estilo, usabilidade e informações apresentadas pela aplicação
 04/07:
     Integração com outros trabalhos
+```
