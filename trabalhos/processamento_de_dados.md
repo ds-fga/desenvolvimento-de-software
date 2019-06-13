@@ -1,15 +1,14 @@
-# Jogo
-## Implementação dos menus
+# Processamento de dados
+## Processamento 
 
 ## Grupos
 
 ### Whiskritório	
 - Filipe Oliveira de Almeida- 180145053	
 - Marcelo Aiache Postiglione-180126652	
-- Rafael Berto Pereira  180108344	
 - Paulo Victor da Silva 180129058
 
-### SOS.py	
+### SOS.py (inativo)
 - Allan Jefrey Pereira Nobre/150029624	
 - Ronyell Henrique dos Santos/150046073	
 - Thais Rebouças de Araujo/180078224	
@@ -25,6 +24,7 @@ serão utilizadas pelos outros projetos.
 
 Criar notebook.
 
+```
 13/06:
     Montar ambiente com numpy + pandas + jupyter notebook + scikit-learn
     Criar tarefas no issue tracker do Github
@@ -41,3 +41,4 @@ Criar notebook.
     Levantar dados para gráfico de pontos renda vs. escolaridade no web/charts.js
 04/07:
     Integração com outros trabalhos
+```
