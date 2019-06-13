@@ -3,21 +3,17 @@
 
 ## Grupos
 
-### Amigos do bigode	
-- Caio Oliveira de Moraes 150120630	
-- Matheus Rodrigues do Nascimento 160015294	
-- Lucas Pereira de Andrade de Macêdo	
 
 ### Gitcode	
 - Luis Bruno / 140169695	
 - Hugo Aragão / 160124581	
 - Andre Eduardo / 160111978	
 
-### KERNEL	
-- Alice Gonçalves do Nascimento / 180112627	
-- Luis Gustavo Ferreira Marques/ 180105604	
-- Matheus Brandão Teixeira / 180127535	
-- Pedro Martins Lima / 180129350	
+### Nexus	
+- Eduardo Maia Rezende / 180119231	
+- João Pedro Alves da Silva Chaves / 180123203	
+- Andrew Lucas Guedes de Souza / 160023921
+
 
 ## Produto
 
@@ -36,6 +32,7 @@ Não esqueça de utilizar a arte do jogo e os sprites de personagens no estilo d
 Criar uma aplicação utilizando o Chart.js (https://www.chartjs.org/samples/latest/) e 
 jQuery (https://jquery.com) que consiga exibir as informações discutivas acima.
 
+```
 13/06:
     Criar um esboço do site e como serão as telas e interações
     Criar tarefas no issue tracker do Github
@@ -54,4 +51,5 @@ jQuery (https://jquery.com) que consiga exibir as informações discutivas acima
 27/06:
     Melhoras de estilo, usabilidade e informações apresentadas pela aplicação
 04/07:
-    Integração com os outros trabalhos
+    Integração com os outros trabalhos]
+```
