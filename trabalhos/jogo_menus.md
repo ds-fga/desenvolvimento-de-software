@@ -3,20 +3,18 @@
 
 ## Grupos
 
+### Forest.2	
+- Marcos Vinicius Lima Raimundo / 180145231	
+- Pablo Santos Costa / 180128817	
+- Kalebe Lopes da Cunha / 160010900	
+- Luis Marques 180105604
+
 ### Random DS	
 - Ailamar Alves Guimaraes/160022673	
 - Paulo Victor de Menezes Lopes/160016428	
 - Tiago Samuel Rodrigues/180114689	
 - Lucas Ursulino Boaventura/180114093
-
-### Gaguita	
-- Gabriel Lopes Ramalho/180148338	
-- Luiz Guilherme Palhares Pettengill/150138202	
-- Ítalo Alves Guimarães/180113666	
-
-### Black Mamba	
-- Tiago Samuel Rodrigues/180114689	
-- Lucas Ursulino Boaventura/180114093				
+			
 
 ## Escopo e produto
 
@@ -40,6 +38,7 @@ Finalmente, é necessário criar um menu para o "Game over"
 
 Criar um jogo utilizando a biblioteca Arcade.
 
+```
 13/06:
     Criar um esboço das telas de menu no papel
     Criar tarefas no issue tracker do Github
@@ -55,4 +54,5 @@ Criar um jogo utilizando a biblioteca Arcade.
 27/06:
     Melhoras de estilo e polimento geral
 04/07:
-    Integração com outros trabalhos
+    Integração com outros trabalhos 
+```
