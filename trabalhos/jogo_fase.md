@@ -8,11 +8,6 @@
 - Yuri/180078640	
 - Lucas/180105345	Filipe/180100726
 
-### Forest.2	
-- Marcos Vinicius Lima Raimundo / 180145231	
-- Pablo Santos Costa / 180128817	
-- Kalebe Lopes da Cunha / 160010900	
-
 ### scyphers	
 - Lucas Gabriel Bezerra/ 180125770	
 - Felipe Correia Andrade/ 180113259	
