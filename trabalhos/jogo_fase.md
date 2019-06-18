@@ -31,6 +31,13 @@
 - Matheus Yan Monteiro dos Santos Almeida/180127969	
 - Magno Luiz Vale Vieira/180042696	
 
+### Random DS	
+- Ailamar Alves Guimaraes/160022673	
+- Paulo Victor de Menezes Lopes/160016428	
+- Tiago Samuel Rodrigues/180114689	
+- Lucas Ursulino Boaventura/180114093
+			
+
 ## Escopo e produto
 
 Criar uma fase jogável para o "Jogo da vida". A mecânica básica do jogo consiste
