@@ -9,12 +9,6 @@
 - Kalebe Lopes da Cunha / 160010900	
 - Luis Marques 180105604
 
-### Random DS	
-- Ailamar Alves Guimaraes/160022673	
-- Paulo Victor de Menezes Lopes/160016428	
-- Tiago Samuel Rodrigues/180114689	
-- Lucas Ursulino Boaventura/180114093
-			
 
 ## Escopo e produto
 
