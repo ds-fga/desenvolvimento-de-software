@@ -13,7 +13,8 @@
 ### Maia.cia	
 - Mateus Cunha Maia 18/0106805	
 - Vinicius de Sousa Saturnino 18/0132245	
-- Matheus Afonso de Souza 18/0127641	
+- Matheus Afonso de Souza 18/0127641
+- Lucas Melo dos Santos 18/0125885
 
 
 ## Escopo e produto
