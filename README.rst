@@ -15,7 +15,7 @@ Professor:
 Disciplina: 
     Desenvolvimento de Software
 Semestre/ano: 
-    01/2019
+    02/2019
 Carga horária: 
     60 h
 Créditos: 
