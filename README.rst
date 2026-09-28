@@ -1,3 +1,7 @@
+.. warning::
+
+   This repository is archived. It holds the 2019 course material and is kept for reference.
+
 ===========================
 Desenvolvimento de Software
 ===========================
